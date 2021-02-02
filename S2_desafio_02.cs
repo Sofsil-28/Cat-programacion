@@ -44,6 +44,6 @@ namespace S2_t2
                 Console.WriteLine("Usted debe pagar " + cuota + " pesos de cuota moderadora  ");
             }
         }
-        
+        //https://youtu.be/nhgDNi4OPdo
     }
 }
