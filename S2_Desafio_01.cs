@@ -31,7 +31,7 @@ namespace S2_T1
                 Console.WriteLine("Usted es tarifa c y debe pagar 10.800 pesos ");
 
             }
-            //Es un solo video :
+            //Es un solo video : https://youtu.be/nhgDNi4OPdo
             //también está la presentación de ppt (fue grabado en power point ) por si acaso. https://drive.google.com/drive/folders/1kGqXSaZdNO3gyniyLCJqf89hD3-Lrr7X?usp=sharing
         }
     }
