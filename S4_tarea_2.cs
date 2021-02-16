@@ -53,6 +53,7 @@ namespace S4_Tarea2
 
                     Console.Write("Desea seguir jugando (s/n):  ");
                     respuesta = Console.ReadLine();
+                    //profe no pude con el contador :c
 
                 }
 
