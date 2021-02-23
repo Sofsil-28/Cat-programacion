@@ -24,15 +24,12 @@ namespace S5_Tarea_Euler
 
             //e es igual a 
             for (int r = 0; r <= n; r++)
-            {
-               
-               
-                double y = Factorial(x);
-
+            { 
+           
                 //sumatoria
 
                  s += (Math.Pow(x, r) / Factorial(r));
-              //Console.Write("Resultado :"+s );
+              
 
                 
                 Console.WriteLine("\nIteracion" + r );
