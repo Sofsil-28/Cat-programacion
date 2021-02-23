@@ -10,7 +10,7 @@ namespace S5_Tarea_Euler
     {
         static void Main(string[] args)
         {
-
+            //https://youtu.be/tIJjllCce-c
 
             Console.Write("Ingrese el valor de x:  ");
             double x= double.Parse(Console.ReadLine());
