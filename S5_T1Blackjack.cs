@@ -6,8 +6,9 @@ namespace S5_t01
     {
         static void Main(string[] args)
         {
+            //https://upbeduco-my.sharepoint.com/:p:/g/personal/sofia_silvaa_upb_edu_co/EQyCNisxFLtCgzrryKGlRugBHidGpMGF5k3WrKIjuPa-wA?e=yq5ppM
             Random aleatorio = new Random();
-
+            
             Console.Write("¿Cuantos jugadores hay ?:  ");
             double jugadores = double.Parse(Console.ReadLine());
 
