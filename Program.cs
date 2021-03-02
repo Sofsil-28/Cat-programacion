@@ -1,67 +1,120 @@
 ﻿using System;
 
-namespace S6_Tutoria
+namespace S6_CASA_01
 {
     class Program
     {
         static void Main(string[] args)
         {
+            Random aleatorio = new Random();
+            string respuesta = "s";
+            int total = 0, dado = 0, dadoE = 2;
+            int vida = 3;
 
-            string[] nombres = { "Nezuko", "Tanjiro", "Zenitsu", "Inosuke", "Genya", "Kanao", "Tomioka" };
-            double[] estatura = { 153, 165, 164.5, 164, 180, 156, 176 };
-
-            double NombreC = 0;
-            double min = 500;
-
-            //promedio estatura
-
-            double total = 0;
-
-            total += estatura[0];
-            total += estatura[1];
-            total += estatura[2];
-            total += estatura[3];
-            total += estatura[4];
-            total += estatura[5];
-            total += estatura[6];
-
-            double promedio = total / 7;
-          
-            Console.WriteLine("Promedio de estarura: " + promedio);
-
-          
+            Console.Write("¿Desea empezar el juego ? (s/n):  ");
+            respuesta = Console.ReadLine();
 
            
 
-           
-
-            double total2 = 0;
-
-            for (int i = 0; i < estatura.Length; i += 1)
+            while (respuesta == "s")
             {
-             total2 += estatura[i];
-             Console.WriteLine(total2);
-            }
-               double promedio2 = total2 / estatura.Length;
-                Console.WriteLine(promedio2);
+               
 
-            double[] distancia = new double[estatura.Length];
-
-            int indice = 0;
-            for (int i = 0; i < distancia.Length;i +=1)
-            {
-                distancia[i] = Math.Abs( estatura[i] - promedio2);
-                Console.WriteLine(distancia[i]);
-
-                if (distancia[i] < min) 
+                if (dadoE > 0)
                 {
-                    min = distancia[i]; indice = i; 
+                    Console.Write("Tienes " + dadoE + " Dados especiales" + "¿Desea jugar con el dado especial ? (s/n):  ");
+                    respuesta = Console.ReadLine();
+                }
+                if (respuesta == "s" && dadoE> 0)
+                {
+                    dadoE = dadoE - 1;
+                    dado = aleatorio.Next(1, 13);
+                    Console.WriteLine("Dado Especial :" + dado);
+                }
+
+                else
+                {
+
+
+                    dado = aleatorio.Next(1, 7);
+                    Console.WriteLine("Dado:" + dado);
                 }
                 
+                    total += dado;
+                    Console.WriteLine("Total:" + total);
+
+                
+
+                        for (int ContDado = 0; dado == 1; ContDado += 1)
+                        {
+                            bool D = (ContDado == 2);
+
+                            if (D)
+                            {
+                                vida = vida - 1;
+                                
+                                total = total - 10;
+
+                                ContDado = 0;
+                                D = false;
+                                
+                            }
+
+                            dado = 0;
+
+
+                        }
+                        
+
+                        for (int ContDado = 0; dado == 6; ContDado += 1)
+                        {
+                            bool F = (ContDado == 2);
+
+                            if (F)
+                            {
+                                vida = vida + 1;
+                               
+                                ContDado = 0;
+                                F = false;
+                                
+
+                                
+                            }
+                            dado = 0;
+                        }
+
+                if (vida == 4)
+                {
+                    vida = 3;
+                }
+
+                Console.WriteLine("vidas:" + vida);
+                if (vida == 0)
+                {
+
+
+                    Console.WriteLine("Perdiste ");
+
+                    respuesta = "n";
+                }
+
+                else
+                {
+                    if (total >= 100)
+                    {
+                        Console.WriteLine("Ganaste");
+
+                        respuesta = "n";
+                    }
+
+
+                    Console.Write("Desea seguir jugando (s/n):  ");
+                    respuesta = Console.ReadLine();
+
+                }
+
             }
 
-            Console.WriteLine(nombres[indice]);
-          
         }
     }
 }
