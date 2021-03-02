@@ -6,6 +6,8 @@ namespace S6_CASA_01
     {
         static void Main(string[] args)
         {
+           //https://youtu.be/ldSPTJ2YnwA
+            
             Random aleatorio = new Random();
             string respuesta = "s";
             int total = 0, dado = 0, dadoE = 2;
