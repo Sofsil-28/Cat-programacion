@@ -6,7 +6,7 @@ namespace s8_String
     {
         static void Main(string[] args)
         {
-
+            //https://youtu.be/ZH-qP9W3GTk
             int contador = 0;
             Console.WriteLine("-----ingrese una frase  :  ");
             string frase = Console.ReadLine();
